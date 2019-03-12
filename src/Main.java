@@ -3,7 +3,7 @@ import java.util.Random;
 public class Main {
 
     public static void main(String[] args) {
-        taskMain(-15, 15);
+        taskMain(-7, 7);
     }
 
     private static void taskMain(int from, int to){
@@ -51,12 +51,9 @@ public class Main {
         for(i = 1; i < 20; i++) {
             if (stat[i] > stat[maxIndex]) {
                 maxIndex = i;
-                System.out.println("Чаще всего встречается '" + arr[maxIndex] + "' ---> " + stat[maxIndex] + " раз(а)");
             }
         }
-        if(maxIndex == 0){
-            System.out.println("Чаще всего встречается '" + arr[0] + "' ---> " + stat[0] + " раз(а)");
-        }
+        System.out.println("Чаще всего встречается '" + arr[maxIndex] + "' ---> " + stat[maxIndex] + " раз(а)");
         for(i = 0; i < 20; i++){
             if((stat[maxIndex] == stat [i]) && (maxIndex != i)){
                 System.out.println("Чаще всего встречается '" + arr[i] + "' ---> " + stat[i] + " раз(а)");
